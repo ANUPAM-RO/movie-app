@@ -28,8 +28,8 @@ export async function loader({}: LoaderFunctionArgs) {
 }
 
 export default function Index() {
-  const data = useLoaderData();
-  console.log(data);
+  const data: any = useLoaderData();
+
   return (
     <div className="bg-white py-6 sm:py-8 lg:py-12">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -54,14 +54,15 @@ export default function Index() {
               </Link>
               <div className="flex flex-1 flex-col p-4 sm:p-6">
                 <h2 className="mb-2 text-lg font-semibold text-gray-800">
-                  <Link to={`movie/${movie.id}/comments`}
-                    prefetch="intent" className="transition duration-200 hover:text-indigo-600">
+                  <Link
+                    to={`movie/${movie.id}/comments`}
+                    prefetch="intent"
+                    className="transition duration-200 hover:text-indigo-600"
+                  >
                     {movie?.title}
                   </Link>
                 </h2>
-                <p className="text-gray-500 line-clamp-3">
-                  {movie?.overview}
-                  </p>
+                <p className="text-gray-500 line-clamp-3">{movie?.overview}</p>
               </div>
             </div>
           ))}
