@@ -21,7 +21,7 @@ export default function MovieId() {
 
   return (
     <div className="min-h-screen p-10">
-      <img src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`} alt="" className="h-[40vh] object-cover w-full rounded-lg" />
+      <img src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`} alt="" className="h-[45vh] object-cover w-full rounded-lg" />
     
           <h1 className="text-4xl font-bold text-center pt-5">{data.title}</h1>
 
